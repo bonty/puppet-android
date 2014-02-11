@@ -4,10 +4,9 @@
 # Usage:
 #
 #     include android::studio
-class android::studio($version = '133.970939') {
-
-  package { "Android Studio Bundle ${version}":
+class android::studio {
+  package { "Android Studio Bundle 0.4.2":
     provider => 'appdmg',
-    source   => "https://dl.google.com/android/studio/android-studio-bundle-${version}-mac.dmg",
+    source   => "https://dl.google.com/android/studio/install/0.4.2/android-studio-bundle-133.970939-mac.dmg",
   }
 }

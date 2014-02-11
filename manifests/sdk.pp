@@ -8,12 +8,7 @@ class android::sdk {
   include android
   include java
 
-  homebrew::formula { 'android-sdk':
-    before => Package['boxen/brews/android-sdk'],
-  }
-
-  package { 'boxen/brews/android-sdk':
-    ensure  => $android::config::sdk_version,
+  package { 'android-sdk':
     require => Class['java'],
   }
 }

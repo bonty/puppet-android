@@ -7,12 +7,7 @@
 class android::ndk {
   include android::sdk
 
-  homebrew::formula { 'android-ndk':
-    before => Package['boxen/brews/android-ndk'],
-  }
-
-  package { 'boxen/brews/android-ndk':
-    ensure  => $android::config::ndk_version,
+  package { 'android-ndk':
     require => Class['Android::Sdk'],
   }
 }
